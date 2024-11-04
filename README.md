@@ -54,20 +54,20 @@ subset. If there are several correct answers, print any of them.
 
 #### Examples
 ##### Input #1
-4 15 17
+4 15 17\
 6 8 8 7
 ##### Answer #1
-2
+2\
 2 1
 ##### Input #2
-4 14 15
+4 14 15\
 5 5 6 6
 ##### Answer #2
 0
 
 ##### Input #3
-4 10 20
+4 10 20\
 15 17 16 18
 ##### Answer #3
-1
+1\
 3 
