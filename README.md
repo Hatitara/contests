@@ -27,3 +27,47 @@ it's better to jump directly from 0 to 11 ($3·11^2 = 363$) rather than jumping 
 3 0 20 11
 ##### Answer #1
 29 363
+
+### - Task H [⏳]
+Peter is working for a company that has built a machine for detecting molecules. Each molecule has a positive integer 
+weight. The machine has a detection range $[l;u]$, where $l$ and $u$ are positive integers. The machine can detect a set of 
+molecules if and only if this set contains a subset of the molecules with total weight belonging to the machine's 
+detection range.
+
+Formally, consider n molecules with weights $w_0,...,w_{n−1}$. The detection is successful if there is a set 
+of distinct indices $I = i_1,...,i_m$ such that $l≤w_{i_1}+...+w_{i_m}≤u$.
+
+Due to specifics of the machine, the gap between $l$ and $u$ is guaranteed to be greater than or equal to the weight gap 
+between the heaviest and the lightest molecule. Formally $u−l≥w_{max}−w_{min}$, where $w_{max}=max(w_0,...,w_{n−1})$ 
+and $w_{min}=min(w_0,...,w_{n−1})$.
+
+Your task is to write a program which either finds any one subset of molecules with total weight within the 
+detection range, or determines that there is no such subset.
+
+#### Input
+First line contains three integers: the number of molecules $n$ ($1≤n≤200000$) and the endpoints of the detection 
+range $l$ and $u$ ($1≤l,u<2^{31}$). Second line contains $n$ integers: $w_0,...,w_{n−1}$ ($1≤w_i<2^{31}$).
+
+#### Output
+Print in the first line the size of subset m. Print in the second line the indices of molecules that form any one such 
+subset. If there are several correct answers, print any of them.
+
+#### Examples
+##### Input #1
+4 15 17
+6 8 8 7
+##### Answer #1
+2
+2 1
+##### Input #2
+4 14 15
+5 5 6 6
+##### Answer #2
+0
+
+##### Input #3
+4 10 20
+15 17 16 18
+##### Answer #3
+1
+3 
