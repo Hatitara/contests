@@ -109,3 +109,28 @@ Print the number of seconds the students will be working out.
 0
 ##### Answer #2
 0
+
+### - Task F [✅]
+Given a matrix $n×n$, filled with positive integers. The path starts in the upper left corner of the matrix. In one 
+move you can go into the next vertical or horizontal cell (if it exists). You can not walk diagonally, you can not 
+stay in one place. Find the maximum sum of numbers, standing in the cells on the path of length $k$ (a cell can be 
+visited several times).
+
+#### Input
+In the first row the integers $n$ and $k$ ($2≤n≤100$,$1≤k≤2000$), separated with a space, are given. Each of the next 
+$n$ rows contains $n$ numbers and describe the matrix. All numbers in matrix are integer and lie in the range from $1$ 
+to $9999$.
+
+#### Output
+Print one number - the maximum sum.
+
+#### Examples
+##### Input #1
+5 7\
+1 1 1 1 1\
+1 1 3 1 9\
+1 1 6 1 1\
+1 1 3 1 1\
+1 1 1 1 1
+##### Answer #1
+21
