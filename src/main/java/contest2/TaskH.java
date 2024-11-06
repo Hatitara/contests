@@ -4,71 +4,63 @@ import java.util.*;
 
 public class TaskH {
     public static void main(String[] args) {
-        MoleculeDetection.get();
+        MoleculeDetector moleculeDetector = new MoleculeDetector(new Scanner(System.in));
+        moleculeDetector.getMaxAmount();
     }
 }
 
-class MoleculeDetection {
-    private static boolean boundsCheck(int value, int leftBound, int rightBound) {
-        return value >= leftBound && value <= rightBound;
+class MoleculeDetector {
+
+    private final long size;
+    private final long lowerBound;
+    private final long upperBound;
+    private final Pair[] molecules;
+
+    public MoleculeDetector(Scanner scanner) {
+        this.size = scanner.nextLong();
+        this.lowerBound = scanner.nextLong();
+        this.upperBound = scanner.nextLong();
+
+        this.molecules = new Pair[(int) size];
+        for (int i = 0; i < size; i++) {
+            molecules[i] = new Pair(scanner.nextLong(), i);
+        }
+        Arrays.sort(molecules, Comparator.comparingLong(p -> p.weight));
     }
 
-    public static void get() {
-        Scanner scanner = new Scanner(System.in);
-        int size = scanner.nextInt();
-        int lowerBound = scanner.nextInt();
-        int upperBound = scanner.nextInt();
-        Integer[][] indexedWeights = new Integer[size][2];
+    public void getMaxAmount() {
+        long sum = 0;
+        int i = 0, j = 0;
 
-        for (int i = 0; i < size; i++) {
-            indexedWeights[i][0] = scanner.nextInt();
-        }
+        while (j < size) {
+            sum += molecules[j].weight;
 
-        if (size == 1) {
-            if (indexedWeights[0][0] >= lowerBound && indexedWeights[0][0] <= upperBound) {
-                System.out.println(1);
-                System.out.println(1);
-            } else {
-                System.out.println(0);
-            }
-            return;
-        }
-
-        List<Integer> greatestMolecules = new ArrayList<>();
-        List<Integer> currentMolecules = new ArrayList<>();
-
-        int leftPointer = 0, rightPointer = 0;
-        int sum = 0, greatestSum = 0;
-
-        while (rightPointer < size) {
-            sum += indexedWeights[rightPointer][0];
-            currentMolecules.add(rightPointer);
-
-            while (sum > upperBound && leftPointer <= rightPointer) {
-                sum -= indexedWeights[leftPointer][0];
-                currentMolecules.removeFirst();
-                leftPointer++;
+            while (sum > upperBound) {
+                sum -= molecules[i].weight;
+                i++;
             }
 
-            if ((currentMolecules.size() > greatestMolecules.size()) ||
-                    (currentMolecules.size() == greatestMolecules.size() && sum > greatestSum)) {
-                greatestMolecules = new ArrayList<>(currentMolecules);
-                greatestSum = sum;
+            if (sum >= lowerBound && sum <= upperBound) {
+                System.out.println(j - i + 1);
+                for (int k = i; k <= j; k++) {
+                    System.out.print(molecules[k].index + " ");
+                }
+                System.out.println();
+                return;
             }
-            rightPointer++;
-        }
 
-        if (!greatestMolecules.isEmpty()) {
-            System.out.println(greatestMolecules.size());
-            StringBuilder result = new StringBuilder();
-            for (int i = greatestMolecules.size() - 1; i >= 0; i--) {
-                result.append(greatestMolecules.get(i));
-                if (i != 0) result.append(" ");
-            }
-            System.out.println(result.toString());
-            return;
+            j++;
         }
-
         System.out.println(0);
+    }
+}
+
+class Pair {
+    long weight;
+    int index;
+
+    Pair(long weight, int index) {
+        this.weight = weight;
+        this.index = index;
     }
 }

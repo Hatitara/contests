@@ -28,7 +28,7 @@ it's better to jump directly from 0 to 11 ($3·11^2 = 363$) rather than jumping 
 ##### Answer #1
 29 363
 
-### - Task H [⏳]
+### - Task H [✅]
 Peter is working for a company that has built a machine for detecting molecules. Each molecule has a positive integer 
 weight. The machine has a detection range $[l;u]$, where $l$ and $u$ are positive integers. The machine can detect a set of 
 molecules if and only if this set contains a subset of the molecules with total weight belonging to the machine's 
