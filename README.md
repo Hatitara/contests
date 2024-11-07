@@ -134,3 +134,39 @@ Print one number - the maximum sum.
 1 1 1 1 1
 ##### Answer #1
 21
+
+### - Task E [✅]
+Soon there will be team competition «Nowruz Cup 2015». The team must consist of exactly two participants. Amanchik 
+wants to participate in it. He found the list of all $2 * n$ ($1 ≤ n ≤ 10^5$) participants including himself. 
+Each participant has its own rating. Team rating is the average rating of the two participants. The higher 
+the rating the higher team's place. The team takes place number $k + 1$ if there is exactly k teams with strictly 
+greater rating.
+
+Of the various partitions find the highest and the lowest place can take Amanchik's team. Amanchik is a participant 
+number $1$.
+#### Input
+First line contains integer $n$. Next line contains $2 * n$ space separated integers $a[i]$ ($1 ≤ a[i] ≤ 10^5$, 
+$1 ≤ i ≤ 2 * n$).
+#### Output
+Print two integers - the highest and the lowest place of Amanchik's team.
+#### Examples
+##### Input #1
+3\
+999 3 1 2 1000 1
+##### Answer #1
+1 2
+##### Input #2
+1\
+1540 1433
+##### Answer #2
+1 1
+##### Input #3
+3\
+100000 100000 100000 100000 100000 100000
+##### Answer #3
+1 1
+#### Note
+In the first example, if we divide the participants in the following way $(999, 2) (3, 1) (1000, 1)$, 
+Amanchik's team $(999, 2)$ and team $(1000, 1)$ will take the first place, and the team $(3, 1)$ will take the 
+third place. If we divide the participants like $(999, 1) (1000, 2) (3, 1)$, Amanchik's team will take second place. 
+Out of the various partitions, the above will meet the highest and lowest places.
