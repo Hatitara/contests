@@ -170,3 +170,32 @@ In the first example, if we divide the participants in the following way $(999, 
 Amanchik's team $(999, 2)$ and team $(1000, 1)$ will take the first place, and the team $(3, 1)$ will take the 
 third place. If we divide the participants like $(999, 1) (1000, 2) (3, 1)$, Amanchik's team will take second place. 
 Out of the various partitions, the above will meet the highest and lowest places.
+
+### - Task J [✅]
+The cows are trying to become better athletes, so Bessie is running on a track for exactly $n$ minutes. 
+During each minute, she can choose to either run or rest for the whole minute.
+
+The ultimate distance Bessie runs, though, depends on her exhaustion factor, which starts at $0$. When she chooses 
+to run in minute $i$, she will run exactly a distance of $d[i]$ and her exhaustion factor will increase by $1$, but 
+must never be allowed to exceed $m$. If she chooses to rest, her exhaustion factor will decrease by $1$ for each 
+minute she rests. She cannot commence running again until her exhaustion factor reaches $0$. At that point, she can 
+choose to run or rest. At the end of the $n$ minute workout, Bessie's exhaustion factor must be exactly $0$, or she 
+will not have enough energy left for the rest of the day.
+
+Find the maximal distance Bessie can run.
+
+#### Input
+First line contains two integer $n$ ($1 ≤ n ≤ 10^4$) and $m$ ($1 ≤ m ≤ 500$). Next $n$ lines contains integers 
+$d[1], d[2], ..., d[n]$ ($1 ≤ d[i] ≤ 1000$).
+#### Output
+Print a single integer representing the largest distance Bessie can run while satisfying the conditions.
+#### Examples
+##### Input #1
+5 2\
+5\
+3\
+4\
+2\
+10
+##### Answer #1
+9
