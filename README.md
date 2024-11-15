@@ -227,3 +227,47 @@ edge with any connected cell becomes a connected cell and is part of the lake.
 ##### Answer #1
 4
 
+### - Task J [✅]
+A lengthy drought has left Farmer John's n pastures devoid of grass. However, with the rainy season arriving soon, 
+the time has come to "revegetate". In Farmer John's shed, he has two buckets, each with a different type of 
+grass seed. He wants to plant grass in each of his $n$ pastures, choosing exactly one type of grass to plant in each.
+
+Being a dairy farmer, Farmer John wants to make sure he manages the somewhat particular dietary needs 
+of his $m$ cows. Each of his $m$ cows has two favourite pastures. Some of his cows have a dietary restriction that 
+they should only eat one type of grass consistently - Farmer John therefore wants to make sure the same type of 
+grass is planted in the two favourite fields of any such cow. Other cows have a very different dietary restriction, 
+requiring them to eat different types of grass. For those cows, Farmer John of course wants to make sure their two 
+favourite fields contain different grass types.
+
+Please help Farmer John determine the number of different ways he can plant grass in his $n$ pastures.
+#### Input
+The first line contains $n$ $(2≤n≤10^5)$ and $m$ $(1≤m≤10^5)$. Each of the next $m$ lines contains a character that 
+is either 'S' or 'D', followed by two integers in the range $1...n$, describing the pair of pastures that are 
+the two favourites for one of Farmer John's cows. If the character is 'S', this line represents a cow that 
+needs the same type of grass in its two favourite pastures. If the character is 'D', the line represents a 
+cow that needs different grass types.
+
+#### Output
+Print the number of ways Farmer John can plant grass in his $n$ pastures. Write your answer in binary.
+
+#### Examples
+##### Input #1
+3 2\
+S 1 2\
+D 3 2
+##### Answer #1
+10
+##### Input #2
+9 10\
+S 1 2\
+S 4 5\
+D 1 5\
+D 2 4\
+D 2 5\
+D 5 3\
+S 6 7\
+S 8 9\
+D 6 9\
+D 8 7
+##### Answer #2
+100
