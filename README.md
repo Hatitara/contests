@@ -271,3 +271,27 @@ D 6 9\
 D 8 7
 ##### Answer #2
 100
+
+### - Task I [✅]
+A directed graph with $n$ vertices and $m$ edges is given, with vertices numbered from $1$ to $n$. Find the 
+minimum number of edges that need to be reversed so that there exists at least one path from vertex $1$ to vertex $n$.
+#### Input
+The first line contains two integers $n$ and $m$ ($1≤n,m≤2⋅10^6$) — the number of vertices and edges in the graph. 
+Each of the following $m$ lines contains two integers $x_i$ and $y_i$ ($1≤x_i,y_i≤n$), indicating that the $i$-th 
+directed edge goes from vertex $x_i$ to vertex $y_i$.
+#### Output
+Print the minimum number of edges that need to be reversed. If it is not possible to obtain a path from 
+vertex $1$ to vertex $n$, print $−1$.
+![Image with example](https://static.e-olymp.com/content/a3/a323657425ee743acea3408abb66e49eb10c4678.gif)
+#### Examples
+##### Input #1
+7 7\
+1 2\
+3 2\
+3 4\
+7 4\
+6 2\
+5 6\
+7 5
+##### Answer #1
+2
