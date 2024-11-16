@@ -335,3 +335,54 @@ You should output $YES$ if we can find a new book for every club member and $NO$
 4 0
 ##### Answer #1
 $YES$
+
+### - Task F [✅]
+In a parking lot there are a lot of cars and parking spots and all cars want to drive to a parking spot. 
+Due to the traffic regulations cars may only drive parallel to the boundaries of the parking lot and only 
+at the speed of one square per unit of time.
+
+Usually all cars drive to the nearest available parking spot, but that might turn out badly for some cars. 
+Consider for example the following car park (here '$C$' stands for car, '$P$' for parking spot, '$X$' for wall and '$.$'
+for empty spot):
+
+$.C.....P.X...$
+
+$XX.......X..P$
+
+$XX.....C.....$
+
+If the car on the bottom drives to its nearest parking spot, the upper left car must drive all the way to the 
+right, taking $13$ units of time. If, however, the car on the bottom drives to the parking spot on the right, it 
+will take $6$ units of time for both cars to find a parking spot.
+
+Find the minimal amount of time it takes before every car can have a parking spot (assuming that the cars act 
+socially like above). All cars start on an empty spot. Cars are small and any number of them can drive on the 
+same square simultaneously. They can drive over empty spots and parking spots, but not through walls. Each car 
+has to end on a separate parking spot.
+
+#### Input
+Consists of multiple test cases. Each test case begins with a line that contains two integers $row$ and 
+$column$ ($1 ≤ row, column ≤ 50$) - the dimensions of the parking lot. Next row lines describe the parking 
+lot as mentioned above. The number of cars and parking spots on each given parking lot is no more than $100$.
+
+#### Output
+For each test case print in a separate line the minimal amount of time it takes before every car can have 
+a parking spot. If it is impossible for each car to drive to a parking place, print $-1$. If there is no 
+cars at the parking lot, print $0$.
+
+#### Examples
+##### Input #1
+$6$ $11$\
+$XXXXXXXXXXX$\
+$X......XPPX$\
+$XC...P.XPPX$\
+$X......X..X$\
+$X....C....X$\
+$XXXXXXXXXXX$\
+$3$ $5$\
+$..X..$\
+$C.X.P$\
+$..X..$
+##### Answer #1
+$5$\
+$-1$
