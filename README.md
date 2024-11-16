@@ -295,3 +295,43 @@ vertex $1$ to vertex $n$, print $−1$.
 7 5
 ##### Answer #1
 2
+
+### - Task H [✅]
+Porto’s book club is buzzing with excitement for the annual book exchange event! Every year, members bring 
+their favourite book and try to find another book they like that is owned by someone willing to trade with them.
+
+I have been to this book exchange before, and I definitely do not want to miss it this year, but I feel 
+that the trading should be improved. In the past, pairs of members interested in each other’s books would 
+simply trade: imagine that person $a$ brought a book that person $b$ liked and vice-versa, then $a$ and $b$ would 
+exchange their books.
+
+I then realized that many members were left with the same book they walked-in with... If instead of looking for 
+pairs I looked for triplets, I could find more valid exchanges! Imagine that member $a$ only likes member $b$’s 
+book, while $b$ only likes $c$’s book and $c$ likes $a$’s book. These three people could trade their books in a 
+cycle and everyone would be happy!
+
+But why stop at triplets? Cycles could be bigger and bigger! Could you help me find if it is possible 
+for everyone to go out with a new book? Be careful, because members will not give their book without receiving 
+one they like in return.
+
+Given the members of the book club and the books they like, can we find cycles so that everyone receives a new book?
+
+#### Input
+The first line has two integers: $n$ ($2≤n≤10000$) — the number of people, and $m$ ($1≤m≤20000,m≤n^2−n$) — the total 
+number of "declarations of interest". Each of the following $m$ lines has two integers $a$ and $b$, indicating 
+that member $a$ likes the book that member $b$ ($0≤a,b<n$) brought. Numbers $a$ and $b$ will never be the same 
+(a member never likes the book he brought).
+
+#### Output
+You should output $YES$ if we can find a new book for every club member and $NO$ if that is not possible.
+
+#### Examples
+##### Input #1
+5 5\
+0 1\
+1 2\
+2 3\
+3 4\
+4 0
+##### Answer #1
+$YES$
