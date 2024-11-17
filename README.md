@@ -493,10 +493,12 @@ following a sequence of wormholes (maybe Earth is the center of the universe).
 - All wormholes have a constant time difference between their end points. For example, a specific wormhole may cause 
 the person travelling through it to end up 15 years in the future. Another wormhole may cause the person to end up 
 42 years in the past.
-- A brilliant physicist, living on earth, wants to use wormholes to study the Big Bang. Since warp drive has 
+
+A brilliant physicist, living on earth, wants to use wormholes to study the Big Bang. Since warp drive has 
 not been invented yet, it is not possible for her to travel from one star system to another one directly. This can 
-be done using wormholes, of course.
-- The scientist wants to reach a cycle of wormholes somewhere in the universe that causes her to end up in the past. 
+be done using wormholes, of course.\
+
+The scientist wants to reach a cycle of wormholes somewhere in the universe that causes her to end up in the past. 
 By travelling along this cycle a lot of times, the scientist is able to go back as far in time as necessary to reach 
 the beginning of the universe and see the Big Bang with her own eyes. Write a program to find out whether such a 
 cycle exists.
