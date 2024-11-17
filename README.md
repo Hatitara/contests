@@ -496,7 +496,7 @@ the person travelling through it to end up 15 years in the future. Another wormh
 
 A brilliant physicist, living on earth, wants to use wormholes to study the Big Bang. Since warp drive has 
 not been invented yet, it is not possible for her to travel from one star system to another one directly. This can 
-be done using wormholes, of course.\
+be done using wormholes, of course.
 
 The scientist wants to reach a cycle of wormholes somewhere in the universe that causes her to end up in the past. 
 By travelling along this cycle a lot of times, the scientist is able to go back as far in time as necessary to reach 
@@ -531,3 +531,49 @@ $possible$
 3 0 -60
 ##### Answer #2
 $not$ $possible$
+
+### - Task A [✅]
+In order to prepare the "The First National ACM School Contest" (in 20??) the major of the city decided to provide all 
+the schools with a reliable source of power. (The major is really afraid of blackoutsJ). So, in order to do that, power 
+station "Future" and one school (doesn’t matter which one) must be connected; in addition, some schools must be 
+connected as well.
+
+You may assume that a school has a reliable source of power if it’s connected directly to "Future", or to any 
+other school that has a reliable source of power. You are given the cost of connection between some schools. 
+The major has decided to pick out two the cheapest connection plans – the cost of the connection is equal to 
+the sum of the connections between the schools. Your task is to help the major – find the cost of the two cheapest 
+connection plans.
+
+#### Input
+The first line contains two numbers separated by a space: $n$ ($3 ≤ n ≤ 100$) the number of schools in the 
+city, and $m$ the number of possible connections among them. Next $m$ lines contain three numbers $a_i$, 
+$b_i$, $c_i$, where $c_i$ ($1 ≤ c_i ≤ 300$) is the cost of the connection between schools $a_i$ and $b_i$. The 
+schools are numbered with integers in the range $1$ to $n$.
+
+#### Output
+The output line should contain two numbers separated by a single space - the cost of two the cheapest 
+connection plans. Let $S_1$ be the cheapest cost and $S_2$ the next cheapest cost. It’s important, that 
+$S_1 = S_2$ if and only if there are two cheapest plans, otherwise $S_1 ≤ S_2$. You can assume that it is 
+always possible to find the costs $S_1$ and $S_2$.
+
+#### Examples
+##### Input #1
+4 4\
+1 2 2\
+1 4 5\
+1 3 4\
+2 3 3
+##### Answer #1
+10 11
+##### Input #2
+5 8\
+1 3 75\
+3 4 51\
+2 4 19\
+3 2 95\
+2 5 42\
+5 4 31\
+1 2 9\
+3 5 66
+##### Answer #2
+110 121
